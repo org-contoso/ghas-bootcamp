@@ -660,7 +660,7 @@ func authnMiddleware(next http.Handler) http.Handler {
 			
 			
 			if claims, ok := token.Claims.(*OctoClaims); ok && token.Valid {
-				log.Printf("AuthN: Received valid token %s", authz)
+				log.Printf("AuthN: Received valid token %s", obfuscateToken(authz))
 
 				log.Printf("AuthN: Adding %s %s", GitHubLoginHeader, claims.Profile.Login)
 				r.Header.Add(GitHubLoginHeader.String(), claims.Profile.Login)
@@ -680,6 +680,13 @@ func authnMiddleware(next http.Handler) http.Handler {
 		http.Error(w, "Forbidden", http.StatusForbidden)
 
 	})
+}
+
+func obfuscateToken(token string) string {
+	if len(token) > 10 {
+		return token[:10] + "..."
+	}
+	return token
 }
 
 func main() {
