@@ -8,7 +8,7 @@
 > This bootcamp is designed to help you become familiar with GitHub Advanced Security (GHAS) and learn how to effectively use its features in your own repositories. The repository intentionally includes multiple vulnerabilities, allowing you to test and explore GHAS capabilities firsthand. For the best experience with the GitHub Copilot Autofix feature, we recommend disabling third-party scanning tools, as they are currently in Public Preview.
 
 ## :mega: Prerequisites
-To participate in the workshop you need a GitHub account and need to be invited to the workshop organization [ghas-bootcamp](https://github.com/ghas-bootcamp). If your repository hasn't been automatically created in the workshop organization, either click `Use this template` and create a repository under this organization, or create a new repository and push a copy of the `ghas-bootcamp` repository to an organization with GHAS enabled.
+To participate in the workshop you need a GitHub account and need to be invited to the workshop organization [ghas-bootcamp](https://github.com/ghas-bootcamp). If your repository hasn't been automatically created in the workshop organization, either click `Use this template` and create a repository under this organization, or create a new repository and push a copy of the `ghas-bootcamp` repository to an organization with GHAS enabled!
 
 ```bash
 git clone https://github.com/ghas-bootcamp/ghas-bootcamp.git
